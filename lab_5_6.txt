@@ -1,0 +1,266 @@
+  
+CREATE TABLE CUSTOMER(
+   cust_id INT PRIMARY KEY,
+   cust_name  varchar(50) ,
+   dob  date,
+   city varchar(50),
+   street varchar(50),
+   state varchar(50),
+   pincode INT,
+   ph_no BIGINT,
+   deal_no INT,
+   photo_identity char(1),
+   v_id INT
+);
+INSERT INTO CUSTOMER VALUES
+(41,'raju','03-04-1996','Guntur','Ramgopal_street','Andhra_pradesh',5000213,9123456789,10,'y',3);
+INSERT INTO CUSTOMER VALUES
+(42,'hari','03-04-1996','Perambur','Mylapur','Tamil_Nadu',500211,1122334455,20,'n',2);
+INSERT INTO CUSTOMER VALUES
+(43,'giri','03-04-1996','hyderabad','srnagar','Telangana',500079,8877665544,30,'y',4);
+INSERT INTO CUSTOMER VALUES
+(44,'ramu','03-04-1996','vijayawada','benz 
+circle','Andhra_pradesh',512345,7654564321,40,'y',5);
+INSERT INTO CUSTOMER VALUES
+(45,'rahul','03-04-1996','guntur','rajunagar','Andhra_pradesh',523022,9999999998,50,'y',7);
+INSERT INTO CUSTOMER VALUES
+(46,'gopi','03-04-1996','hyderabad','gachibowli','Telangana',567089,7787777775,10,'n',1);
+INSERT INTO CUSTOMER VALUES
+(47,'karthik','03-04-1996','guntur','chandramoulinagar','Andhra_pradesh',546789,7788776633,20,'n',6);
+INSERT INTO CUSTOMER VALUES
+(48,'gopal','03-04-1996','Hyderabad','ameerpet','Telangana',500023,6734556345,30,'y',8);
+INSERT INTO CUSTOMER VALUES
+(49,'dinesh','03-04-1996','Hyderabad','kondapur','Telangana',502033,6794537212,30,'n',10);
+INSERT INTO CUSTOMER VALUES
+(50,'suresh','03-04-1996','vijayawada','poranki','',512022,7896543233,20,'y',9);
+                   
+
+
+                         ****TABLE2*****(VEHICLE)
+1. create database vehicle;
+2.\c vehicle
+3.creating table---->
+  CREATE TABLE vehicle(
+            veh_id int primary key,
+            veh_type varchar(80) ,
+            veh_name varchar(80),
+            veh_number varchar(80));
+4.Inserting values into my table_--->
+   INSERT INTO vehicle VALUES
+    (1,'2_wheeler','royal_enfield','AP1234');
+   INSERT INTO vehicle VALUES
+    (2,'3_wheeler','auto','AP3421');
+   INSERT INTO vehicle VALUES
+     (3,'2_wheeler','royal_enfield','TS213');
+   INSERT INTO vehicle VALUES
+    (4,'4_wheeler','fiat','AP2346');
+   INSERT INTO vehicle VALUES6
+    (5,'4_wheeler','benz','TS1256');
+   INSERT INTO vehicle VALUES
+     (6,'3_wheeler','auto','TN5544');
+   INSERT INTO vehicle VALUES
+    (7,'2_wheeler','splendor','AP3214');
+   INSERT INTO vehicle VALUES
+    (8,'2_wheeler','bajaj','AP7895');
+   INSERT INTO vehicle VALUES
+     (9,'2_wheeler','royal_enfield','AP2134');
+   INSERT INTO vehicle VALUES
+     (10,'4_wheeler','ambassador','TS4567');
+
+
+
+                     ***TABLE3*****(EDU_BUS)
+CREATE TABLE edu_bus(
+edu_id int primary key,
+edu_name varchar(80),
+ph_no bigint,
+city varchar(80),
+street varchar(80),
+state varchar(80),
+pincode int,
+deal_no int
+);
+INSERT INTO edu_bus VALUES
+(31,'dps',1122334455,'Hyderbad','santhnagar','Telangana',512345,444);
+INSERT INTO edu_bus VALUES
+(32,'klu',44556677,'guntur','vaddeswaram','Andhra 
+pradesh',567432,111);
+INSERT INTO edu_bus VALUES
+(33,'dav',123456789,'Hyderbad','jubilee 
+hills','Telangana',500897,333);
+INSERT INTO edu_bus VALUES
+(34,'surya',4356789321,'Hyderbad','bachupally','Telangana',512098,111);
+INSERT INTO edu_bus VALUES
+(35,'vit',7788996578,'Hyderbad','kukatpally','Telangana',523087,222);
+INSERT INTO edu_bus VALUES
+(36,'rvrrjc',2233445566,'Guntur','guntur','Andhra 
+pradesh',512087,222);
+INSERT INTO edu_bus VALUES
+(37,'vnr',1122334455,'Hyderbad','miyapur','Telangana',512345,333);
+INSERT INTO edu_bus VALUES
+(38,'klh',3445996578,'Hyderbad','aziznagar','Telangana',512345,222);
+INSERT INTO edu_bus VALUES
+(39,'bvrit',112566725,'Hyderbad','nizampet','Telangana',512345,111);
+INSERT INTO edu_bus VALUES
+(40,'cbit',1122965785,'Hyderbad','gandipet','Telangana',512345,111);
+
+
+                             ***TABLE4*****(dealer)
+CREATE TABLE dealer (
+       deal_id int,deal_name varchar(69),city 
+varchar(100),street varchar(200),state varchar(50),pincode 
+BIGINT,d_no BIGINT,ph_int BIGINT);
+
+INSERT INTO dealer VALUES 
+    (51,'raju','guntur','Raju Nagar','Andhra 
+Pradesh',612345,555,9988776655);
+    INSERT INTO dealer VALUES 
+    
+(52,'raghu','hyderabad','kukatpally','Telengana',678890,666,8765489765);
+    INSERT INTO dealer VALUES 
+    
+(53,'kiran','hyderabad','bachupally','Telengana',546789,777,7654564556);
+    INSERT INTO dealer VALUES 
+    
+(54,'ganesh','hyderabad','kondapur','Telengana',456789,111,874648545);
+    INSERT INTO dealer VALUES 
+    
+(55,'hari','hyderabad','ammerpet','Telengana',534467,222,9988776655);
+    INSERT INTO dealer VALUES 
+    
+(56,'kiran','hyderabad','santhanagar','Telengana',512334,333,9988776655);
+    INSERT INTO dealer VALUES 
+    
+(57,'kamal','hyderabad','miyapur','Telengana',504406,444,9988776655);
+    INSERT INTO dealer VALUES 
+    (58,'eswar','guntur','mangalagiri','Andhra 
+Pradesh',563456,888,9988776655);
+
+
+                     ***TABLE5***(branch)
+CREATE TABLE BRANCH(
+branch_id int primary key,
+b_name varchar(80),
+state varchar(80),
+city varchar(80),
+pincode int,
+street varchar(80),
+d_no int,
+phno1 bigint,
+phno2 bigint,
+c_id int,
+v_id int,
+e_id int
+);
+INSERT INTO BRANCH VALUES
+(210,'gandipet','Telangana','Hyderbad',512345,'jntu',53,9848022338,8802233811,41,1,31);
+INSERT INTO BRANCH VALUES
+(211,'santhnagar','Telangana','Hyderbad',512345,'gachibowli',52,9848022344,8802234433,43,2,32);
+INSERT INTO BRANCH VALUES
+(212,'vaddeswaram','Andhra 
+pradesh','Guntur',567432,'kondapur',51,8802233811,9848022311,41,1,31);
+INSERT INTO BRANCH VALUES
+(213,'jubilee 
+hills','Telangana','Hyderbad',500897,'ameerpeta',53,8802234433,9848065722,43,2,32);
+INSERT INTO BRANCH VALUES
+(214,'bachupally','Telangana','Hyderbad',512098,'erragada',55,9848022311,8065722322,41,1,31);
+INSERT INTO BRANCH VALUES
+(215,'kukatpally','Telangana','Hyderbad',523087,'pnbs',52,9848065722,8065722311,43,2,32);
+INSERT INTO BRANCH VALUES
+(216,'guntur','Andhra 
+pradesh','Guntur',512087,'towers',54,8880657222,9848022338,41,1,31);
+INSERT INTO BRANCH VALUES
+(217,'miyapur','Telangana','Hyderbad',512345,'bhaskar 
+nagar',55,8806572233,9848022338,41,1,31);
+INSERT INTO BRANCH VALUES
+(218,'aziznagar','Telangana','Hyderbad',512345,'rajunagar',56,8065722322,9848022344,43,2,32);
+INSERT INTO BRANCH VALUES
+(219,'nizampet','Telangana','Hyderbad',512345,'kbhp',52,8065722311,9848022338,41,1,31);
+
+               ****TABLE6****(renewal)
+
+CREATE TABLE renewal(
+branch_id int,
+c_id int,
+check_license_period int
+);
+INSERT INTO renewal VALUES
+(210,41,4);
+INSERT INTO renewal VALUES
+(210,42,6);
+INSERT INTO renewal VALUES
+(213,44,4);
+INSERT INTO renewal VALUES
+(211,45,9);
+INSERT INTO renewal VALUES
+(211,46,10);
+INSERT INTO renewal VALUES
+(215,47,4);
+INSERT INTO renewal VALUES
+(216,48,6);
+INSERT INTO renewal VALUES
+(217,49,7);
+INSERT INTO renewal VALUES
+(217,50,8);
+                          
+             ***TABLE7****(REGISTRATION)
+
+CREATE TABLE registration(
+cust_id int,
+veh_id int,
+deal_id int,
+date date
+);
+INSERT INTO registration VALUES
+(41,3,55,'2014-04-04');
+INSERT INTO registration VALUES
+(42,2,54,'2016-09-02');
+INSET INTO registration VALUES
+(43,4,55,'2015-12-03');
+INSERT INTO registration VALUES
+(44,5,52,'2016-09-29');
+INSERT INTO registration VALUES
+(45,7,55,'2013-11-18');
+INSERT INTO registration VALUES
+(46,1,51,'2014-10-06');
+INSERT INTO registration VALUES
+(47,6,52,'2011-07-11');
+INSERT INTO registration VALUES
+(48,8,52,'2015-06-12');
+INSERT INTO registration VALUES
+(49,10,53,'2014-03-02');
+INSERT INTO registration VALUES
+(50,9,53,'20145-10-11');
+
+
+
+
+                               
+****TABLE8*****(contract_permission)
+
+CREATE TABLE contract_permission(
+veh_id int,
+branch_id int,
+no_of_days int,
+amount_per_seat int
+);
+INSERT INTO contract_permission VALUES
+(4,210,15,200);
+INSERT INTO contract_permission VALUES
+(5,210,43,100);
+INSERT INTO contract_permission VALUES
+(10,212,15,400);
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
